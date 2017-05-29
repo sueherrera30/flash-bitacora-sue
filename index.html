@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	
+	<title>bitacora de sue</title>
 	<!--Import Google Icon Font-->
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -24,8 +24,14 @@
 		<p>" Publica lo que quieras en tu navegador ❤ " </p>
 	</header>
 	<!--termina header-->
-
-
+     
+      <div id="area">
+      	<div id="publicacion" class="card-panel hoverable pink">
+      	<h1 id="titulo-nuevo"></h1>
+      	<p id="texto-nuevo"></p>
+      	</div>
+      </div>
+   
 	<!--inicia boton deplegable FAB -->
 	<div class="fixed-action-btn horizontal click-to-toggle">
 		<a class="btn-floating btn-large pink">
@@ -43,22 +49,27 @@
 		</ul>
 	</div>
 	<!-- termina boton desplegable FAB-->
+	
+    
 
 
 	<!--inicia modal texto-->
 	<div id="modalChat" class="modal">
 		<div class="modal-content">
-			<div class="row">
-				<div class="input-field col s12">
-					<input id="text" type="text" class="validate">
-					<label for="password">Titulo</label>
-				</div>
+			  
+				<div class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="modalTitulo" type="text" class="validate" data-length="10" />
+							<label>Título</label>
+						</div>
+				
 
 				<div class="row">
 					<form class="col s12">
 						<div class="row">
 							<div class="input-field col s12">
-								<textarea id="textarea1" class="materialize-textarea"></textarea>
+								<textarea id="modalTexto" class="materialize-textarea"></textarea>
 								<label for="textarea1">Textarea</label>
 							</div>
 						</div>
@@ -67,11 +78,13 @@
 			</div>
 
 			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red accent-2" id="publicar">publicar</a>
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red accent-2" id="mandarTexto">publicar</a>
 			</div>
 
 		</div>
 	</div>
+</div>
+		
 
 	<!-- termina modal texto-->
 
@@ -174,11 +187,10 @@
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-
 	<script src="assets/js/materialize.js"></script>
 
 	<script src="assets/js/main.js"></script>
-</body>
-
+	
+	<script src="assets/js/apis.js"></script>
+ </body>
 </html>
