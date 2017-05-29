@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<tittle></tittle>
+	
 	<!--Import Google Icon Font-->
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -20,45 +20,165 @@
 <body>
 	<!--  inicia header-->
 	<header class="container center">
-		<h1>Flash Bitácora</h1>
-		<p>"Publish anything",just in your browser.</p>
+		<h1>Sue Flash Bitácora</h1>
+		<p>" Publica lo que quieras en tu navegador ❤ " </p>
 	</header>
 	<!--termina header-->
 
-	<!--inicia boton deplegable-->
+
+	<!--inicia boton deplegable FAB -->
 	<div class="fixed-action-btn horizontal click-to-toggle">
 		<a class="btn-floating btn-large pink">
 			<i class="large material-icons">mode_edit</i>
 		</a>
 
 		<ul>
-			<li><a class="btn-floating cyan accent-2 waves-effect waves-light btn" href="#modal-texto" ><i class="material-icons">chat</i></a></li>
+			<li><a class="btn-floating cyan accent-2 waves-effect waves-light btn modal-trigger" href="#modalChat"><i class="material-icons">chat</i></a></li>
 
+			<li><a class="btn-floating  light-blue darken-1 waves-effect waves-light btn modal-trigger" href="#modalImagen"><i class="material-icons">perm_media</i></a></li>
 
-			<li><a class="btn-floating  light-blue darken-1"><i class="material-icons">perm_media</i></a></li>
+			<li><a class="btn-floating teal lighten-2 waves-effect waves-light btn modal-trigger" href="#modalCalendario"><i class="material-icons">today</i></a></li>
 
-			<li><a class="btn-floating teal lighten-2"><i class="material-icons">today</i></a></li>
-
-
-			<li><a class="btn-floating yellow"><i class="material-icons">video_library</i></a></li>
+			<li><a class="btn-floating yellow waves-effect waves-light btn modal-trigger"  href="#modalAudio"><i class="material-icons">video_library</i></a></li>
 		</ul>
+	</div>
+	<!-- termina boton desplegable FAB-->
 
+
+	<!--inicia modal texto-->
+	<div id="modalChat" class="modal">
+		<div class="modal-content">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="text" type="text" class="validate">
+					<label for="password">Titulo</label>
+				</div>
+
+				<div class="row">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s12">
+								<textarea id="textarea1" class="materialize-textarea"></textarea>
+								<label for="textarea1">Textarea</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red accent-2" id="publicar">publicar</a>
+			</div>
+
+		</div>
 	</div>
 
-	<!-- termina boton desplegable-->
-
-
-	
 	<!-- termina modal texto-->
 
+
+	<!--inicia modalimagen-->
+
+	<div id="modalImagen" class="modal">
+		<div class="modal-content ">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="text" type="text" class="validate">
+					<label for="text">Titulo</label>
+				</div>
+
+				<form action="#">
+					<div class="file-field input-field">
+						<div class="btn">
+							<span>Imagen</span>
+							<input type="file">
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text">
+						</div>
+					</div>
+				</form>
+
+
+			</div>
+
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red accent-2" id="publicar">publicar</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- termina modal imagen-->
+
+	<!-- inicia modal calendario-->
+
+
+	<div id="modalCalendario" class="modal">
+		<div class="modal-content ">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="text" type="text" class="validate">
+					<label for="text">Titulo</label>
+				</div>
+
+				<input type="date" class="datepicker" placeholder="selecciona una fecha">
+
+
+
+			</div>
+
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red accent-2" id="publicar">publicar</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!--termina modal calendario-->
+
+	<!--inicia modal audio y video-->
+
+	<div id="modalAudio" class="modal">
+		<div class="modal-content ">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="text" type="text" class="validate">
+					<label for="text">Titulo</label>
+				</div>
+
+				<form action="#">
+					<div class="file-field input-field">
+						<div class="btn">
+							<span>Video o audio</span>
+							<input type="file" multiple>
+						</div>
+						<div class="file-path-wrapper">
+							<input class="file-path validate" type="text" placeholder="Upload one or more files">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat red accent-2" id="publicar">publicar</a>
+			</div>
+
+		</div>
+	</div>
+
+	<!--termina modal de audio y video-->
 
 
 
 
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+
 	<script src="assets/js/materialize.js"></script>
+
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>
