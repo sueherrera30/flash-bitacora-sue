@@ -15,14 +15,14 @@ btnEnviar.addEventListener("click", agregarTexto);
 
 
 function agregarTexto(){	
-   var publicacion = document.getElementById("Publicacion");
-	var tituloNuevo = document.getElementById("titulo-nuevo");
-	var textoNuevo = document.getElementById("texto-nuevo");
+	var nuevaPubli = document.createElement("div");
+	var tituloNuevo = document.createElement("h1");
+	var textoNuevo = document.createElement("p");
     tituloNuevo.innerHTML = titulo;
 	textoNuevo.innerHTML = mensaje;
-	Publicacion.appendChild(tituloNuevo);
-	Publicacion.appendChild(textoNuevo);
-	areaPublicaciones.appendChild(Publicacion);
+	nuevaPubli.appendChild(tituloNuevo);
+	nuevaPubli.appendChild(textoNuevo);
+	areaPublicaciones.appendChild(nuevaPubli);
 }
 
 
